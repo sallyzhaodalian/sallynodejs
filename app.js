@@ -21,7 +21,7 @@ app.use(express.static(__dirname + '/public'));
 
 /*Added by Sally Start*/
 app.get('/index.html', function (req, res) {
-   res.sendFile( __dirname + "/" + "index.html" );
+   res.sendFile( __dirname + "/public/" + "index.html" );
 })
 app.get('/process_get', function (req, res) {
    // 输出 JSON 格式
