@@ -18,6 +18,24 @@ var app = express();
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
 
+
+/*Added by Sally Start*/
+app.get('/index.html', function (req, res) {
+   res.sendFile( __dirname + "/" + "index.html" );
+})
+app.get('/process_get', function (req, res) {
+   // 输出 JSON 格式
+   response = {
+       first_name:req.query.first_name,
+       last_name:req.query.last_name
+   };
+   console.log(response);
+   res.end(JSON.stringify(response));
+})
+/*Added by Sally End*/
+
+
+
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 

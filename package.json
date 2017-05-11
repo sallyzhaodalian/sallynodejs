@@ -1,16 +1,23 @@
 {
-	"name": "NodejsStarterApp",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node app.js"
-	},
-	"dependencies": {
-		"express": "4.13.x",
-		"cfenv": "1.0.x"
-	},
-	"repository": {},
-	"engines": {
-		"node": "4.x"
-	} 
+  "name": "sallynodejs",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "cfenv": "1.0.x",
+    "express": "^4.13.4"
+  },
+  "repository": {},
+  "engines": {
+    "node": "4.x"
+  },
+  "description": "This application demonstrates a simple, reusable Node.js web application based on the Express framework.",
+  "main": "app.js",
+  "keywords": [
+    "sallynodejs"
+  ],
+  "author": "sally",
+  "license": "ISC"
 }
