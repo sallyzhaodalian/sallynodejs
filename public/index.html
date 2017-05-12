@@ -1,32 +1,211 @@
 <!DOCTYPE html>
 <html>
-
-  <head>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="//www.ibm.com/favicon.ico" />
+    <meta name="dcterms.date" content="2015-10-05" />
+    <meta name="dcterms.rights" content="© Copyright IBM Corp. 2015" />
+    <meta name="description" content="Dalian IMT" />
+    <meta name="geo.country" content="CN" />
+    <meta name="keywords" content="IBM" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>NodeJS Starter Application</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheets/style.css">
-  </head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Generic_WWW_V18_menu -->
+    <script>
+        digitalData = {
+            page: {
+                category: {
+                    primaryCategory: 'Dalian'
+                },
+                pageInfo: {
+                    effectiveDate: '2015-10-05',
+                    expiryDate: '2030-10-05',
+                    language: 'zh-CN',
+                    publishDate: '2015-10-05',
+                    publisher: 'IBM Corporation',
+                    version: 'v18',
+                    ibm: {
+                        contentDelivery: 'IMT',
+                        contentProducer: 'IMT',
+                        country: 'CN',
+                        industry: 'ZZ',
+                        owner: 'dalianIMT',
+                        // siteID: replace with formerly IBM.WTMSiteID metatag value
+                        subject: 'Dalian IMT',
+                        type: 'CTZZZ'
+                    },
+                    nc: {
+                        id: {
+                            form: "",
+                            email: "",
+                            country: "",
+                            privacyDiv: ""
+                        },
+                        questionType: "",
+                        questionChoice: "",
+                        Submit: "true",
+                        SaveToGECS: "true"
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="//1.www.s81c.com/common/v18/css/www.css" rel="stylesheet" />
+    <script src="//1.www.s81c.com/common/v18/js/www.js"></script>
+    <link href="//1.www.s81c.com/common/v18/css/application.css" rel="stylesheet" />
+    <script src="//1.www.s81c.com/common/v18/js/dyntabs.js"></script>
+    <link href="//1.www.s81c.com/common/v18/css/forms.css" rel="stylesheet" />
+    <script src="//1.www.s81c.com/common/v18/js/forms.js"></script>
+    <link href="//1.www.s81c.com/common/v18/css/tables.css" rel="stylesheet" />
+    <script src="//1.www.s81c.com/common/v18/js/tables.js"></script>
+    <link href="//1.www.s81c.com/common/v18/css/social.css" rel="stylesheet" />
+    <script src="//1.www.s81c.com/common/js/dojo/dojo.xd.js"></script>
+    <link rel="stylesheet" type="text/css" href="//1.www.s81c.com/common/js/dojo/1.6/dijit/themes/claro/claro.css" />
+    <!--
+    <script src="./javascript/jquery-1.12.4.min.js"></script>
+    -->
+    <style>
+        .ibm-alternate-background #ibm-navigation-trail a {
+            color: #ececec
+        }
 
-  <body>
-    <table>
-      <tr>
-        <td style= "width:30%;">
-          <img class = "newappIcon" src="images/newapp-icon.png">
-        </td>
-        <td>
-          <h1 id="message">Hello World Node.js!</h1>
-          <p class='description'></p> Thanks for creating a <span class = "blue">NodeJS Starter Application</span>.
-        </td>
-      </tr>
-    </table>
-    <form action="https://sallynodejs.mybluemix.net/process_get" method="GET">
-        First Name: <input type="text" name="first_name">  <br>
-         
-        Last Name: <input type="text" name="last_name">
-        <input type="submit" value="Submit">
-    </form>
-  </body>
+        .ibm-common-overlay {
+            padding-bottom: 0 !important;
+        }
 
+        .ibm-common-overlay .content {
+            padding: 0px 20px 0 20px !important;
+            max-height: calc(100vh - 120px) !important;
+        }
+
+        .dataTables_wrapper div>label {
+            display: inline;
+        }
+
+        .dataTables_wrapper div>label span {
+            display: block;
+        }
+
+        .dataTables_wrapper div>label span.select2-container {
+            display: inline-block;
+        }
+
+        .dataTables_wrapper div>label span.selection {
+            display: inline;
+        }
+    </style>
+    <script>
+        IBMCore.common.util.config.set({
+            masthead: {
+                type: "alternate",
+                marketplaceLink: {
+                    enabled: true
+                },
+                search: {
+                    enabled: true
+                },
+                profile: {
+                    enabled: true
+                }
+            },
+            footer: {
+                type: "alternate"
+            }
+        });
+    </script>
+    <!--
+    <script>
+        jQuery(document).ready(function() {
+            jQuery("label").not(".ibm-field-label").not(".dataTables_wrapper div > label").addClass("ibm-column-field-label");
+        });
+    </script>
+    -->
+</head>
+<body id="ibm-com" class="ibm-type">
+    <div id="ibm-top" class="ibm-landing-page">
+        <!-- MASTHEAD_BEGIN -->
+        <div id="ibm-masthead" role="banner" aria-label="IBM">
+            <div id="ibm-universal-nav">
+                <nav role="navigation" aria-label="IBM">
+                    <div id="ibm-home"><a href="//www.ibm.com/cn-zh/">IBM®</a></div>
+                    <ul id="ibm-menu-links" role="toolbar" aria-label="Site map">
+                        <li><a href="//www.ibm.com/sitemap/cn/zh/">Site map</a></li>
+                    </ul>
+                </nav>
+                <div id="ibm-search-module" role="search" aria-labelledby="ibm-masthead">
+                    <form id="ibm-search-form" action="//www.ibm.com/Search/" method="get">
+                        <p>
+                            <label for="q">IBM</label>
+                            <input type="text" maxlength="100" value="" placeholder="Search" name="q" id="q" aria-label="Search" />
+                            <input type="hidden" value="18" name="v" />
+                            <input type="hidden" value="utf" name="en" />
+                            <input type="hidden" value="zh" name="lang" />
+                            <input type="hidden" value="cn" name="cc" />
+                            <!--doubt for Submit translation-->
+                            <input type="submit" id="ibm-search" class="ibm-btn-search" value="Submit" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- MASTHEAD_END -->
+        <div id="ibm-content-wrapper">
+            <header role="banner" aria-labelledby="ibm-pagetitle-h1">
+                <!-- NAVIGATION_BEGIN -->
+                <div class="ibm-sitenav-menu-container">
+                    <div class="ibm-sitenav-menu-name"><a href="">Welcom to Dalian IMT</a></div>
+                    <div class="ibm-sitenav-menu-list">
+                        <ul role="menubar">
+                            <li role="presentation"><a href="/">IMT Home</a></li>
+                            <li role="presentation"><a href="/weeklystatus">Weekly Status</a></li>
+                            <li role="presentation"><a href="/project">Project</a></li>
+                            <li role="presentation"><a href="/schedule">Schedule</a></li>
+                            <li role="presentation"><a href="/user">People</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- NAVIGATION_END -->
+            </header>
+            <div id="ibm-leadspace-head" class="ibm-alternate" style="background: url(./images/leadspace-pink.jpg) center / cover no-repeat;">
+                <div id="ibm-leadspace-body" class="ibm-padding-top-r2 ibm-padding-bottom-r2">
+                    <div class="ibm-columns ibm-alternate-background">
+                        <div class="ibm-col-6-4 ibm-col-medium-1-1">
+                            <h1 class="ibm-h1 ibm-medium ibm-padding-bottom-1">Welcome to Dalian IMT(May 8)</h1>
+                            <h4 class="ibm-h4 ibm-padding-bottom-2">Tracking, Monitoring, Recording and Presenting</h4>
+                            <p class="ibm-button-link ibm-btn-row">
+                                <a href="/user" class="ibm-btn-sec ibm-btn-white">People</a>
+                                <a href="/project" class="ibm-btn-sec ibm-btn-white">Project</a>
+                            </p>
+                            <form id="test_form" class="ibm-row-form" method="post" action="/esignature">
+                                <div class="ibm-columns">
+                                    <div class="ibm-col-6-2">
+
+                                    </div>
+                                    <div class="ibm-col-6-2">
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FOOTER_BEGIN -->
+            <div id="ibm-footer-module"></div>
+            <footer role="contentinfo" aria-label="IBM">
+                <div id="ibm-footer">
+                    <ul>
+                        <li><a href="http://www.ibm.com/contact/us/en/">Contact</a></li>
+                        <li><a href="http://www.ibm.com/privacy/us/en/">Privacy</a></li>
+                        <li><a href="http://www.ibm.com/legal/us/en/">Terms of use</a></li>
+                        <li><a href="http://www.ibm.com/accessibility/us/en/">false</a></li>
+                    </ul>
+                </div>
+            </footer>
+            <!-- FOOTER_END -->
+        </div>
+    </div>
+</body>
 </html>
