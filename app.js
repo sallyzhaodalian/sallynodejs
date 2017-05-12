@@ -15,14 +15,16 @@ var cfenv = require('cfenv');
 // create a new express server
 var app = express();
 
-// serve the files out of ./public as our main files
-app.use(express.static(__dirname + '/public'));
 
 
-/*Added by Sally Start*/
+
+app.use(express.static('public'));
+ 
 app.get('/index.html', function (req, res) {
-   res.sendFile( __dirname + "/public/" + "index.html" );
+   res.sendFile( __dirname + "/" + "index.html" );
 })
+
+
 app.get('/process_get', function (req, res) {
    // 输出 JSON 格式
    response = {
